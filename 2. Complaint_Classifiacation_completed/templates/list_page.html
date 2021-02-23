@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            table{
+                align: center;
+                border: 1px solid;
+                width: 60%;
+                border-collapse: collapse;
+            }
+             th, td{
+                align: center;
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+            th{
+                height:60px;
+                align: center;
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+            </style>
+    </head>
+   <body>
+   <center><h2><u>Finance Consumer complaints List</u></h2></center>
+      <table>
+         <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Complaint</th>
+            <th>Response</th>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["id"]}}</td>
+               <td>{{row["cust_name"]}}</td>
+               <td>{{row["cust_complaint"]}}</td>
+               <td>{{row["complany_resp"]}}</td>
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <br><br><br>
+      <a href = "/">Go back to home page</a>
+   </body>
+</html>

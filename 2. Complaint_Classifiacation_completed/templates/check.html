@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Check complaint status</title>
+        <center><h2><u>Finance Consumer complaint status check</u></h2></center>
+        <style>
+            div {
+                display: block;
+                margin-bottom: 10px;
+                margin-left: 35px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+        <form action="{{url_for('complaint_check')}}" method="POST">
+        
+            <p><b>Your Complaint ID: </b><input type="text" name="id" value={{id}}></p>
+
+            <br><br><br>        
+            
+            <b></b><input type="submit" value="Check">
+        </div>
+            <hr>
+            <b><h2>{{complaint_status_message}}</h2></b>
+        </form>
+        <br><br>
+        <a href = "/">Go back to home page</a>
+    </body>
+</html>
